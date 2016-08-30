@@ -1,0 +1,23 @@
+{
+  "name": "creativeBlueBusines",
+  "authors": [
+    "Onesuch <experts1994@mail.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "font-awesome": "^4.6.3",
+    "scrollissimo": "^0.6.0"
+  }
+}

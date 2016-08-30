@@ -1,0 +1,28 @@
+{
+  "name": "bluebusines",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ONESucH/creativeBlueBusines.git"
+  },
+  "author": "Bogdanov Ilya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ONESucH/creativeBlueBusines/issues"
+  },
+  "homepage": "https://github.com/ONESucH/creativeBlueBusines#readme",
+  "dependencies": {
+    "autoprefixer": "^6.4.0",
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-less": "^3.1.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
