@@ -5,11 +5,11 @@
 }
 
 ::-webkit-scrollbar {
-  width:12px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-width:1px 1px 1px 2px;
+  border-width: 1px 1px 1px 2px;
   border-color: #777;
   border-radius: 10px;
   background-color: #00b100;
@@ -26,11 +26,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  border-width:0;
+  border-width: 0;
   background: #163E60;
 }
 
-::-webkit-scrollbar-track:active{
+::-webkit-scrollbar-track:active {
   border-left: solid 1px #0b0e0e;
   background-color: #00A800;
 }
@@ -66,28 +66,18 @@ a {
   background-size: 4px, cover;
   background-attachment: fixed, fixed;
   background-repeat: repeat, no-repeat;
+  z-index: 1;
 }
 
 .top-container {
   position: relative;
-  vertical-align: middle;
+  width: 100%;
   background-image: url(/img/top-container/logo.png);
   background-size: 6%;
   background-position: left 10% center;
   background-repeat: no-repeat;
   background-color: rgba(189, 215, 237, 0.2);
-  button {
-    padding: .5%;
-    font-size: 95%;
-    color: #BDD7ED;
-    background: none;
-    cursor: pointer;
-    border-radius: 2px;
-    border: 1px solid #BDD7ED;
-    &:hover {
-      color: #7b7b7b;
-    }
-  }
+  z-index: 3;
   ul {
     display: block;
     font-size: 120%;
@@ -102,17 +92,14 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     &:nth-child(1) {
-      margin-left: 65%;
+      margin-left: 60%;
     }
   }
   a {
     color: #BDD7ED;
   }
-  i {
-    padding: 0 12% 0 12%;
-    &:hover {
-      color: #7b7b7b;
-    }
+  i:hover {
+    color: orange;
   }
 }
 
@@ -121,12 +108,13 @@ a {
   position: relative;
   width: 100%;
   height: auto;
+  z-index: 2;
 }
 
 .left-block {
   display: block;
-  position: relative;
   width: 100%;
+  height: auto;
   transition: all .5s ease-in;
   text-align: center;
 }
@@ -174,97 +162,308 @@ a {
 }
 
 .right-animated-panel {
-  position: relative;
-  width: 25%;
   display: none;
+  position: relative;
+  width: 0;
+  z-index: 3;
   overflow: hidden;
   transition: all .5s ease-in;
   background-color: rgba(189, 215, 237, 0.2);
+  ul {
+    position: fixed;
+    width: 25%;
+  }
   li {
     display: block;
     cursor: pointer;
-    color: #BDD7ED;
     padding: 3.5% 15% 3.5% 15%;
     vertical-align: middle;
     &:hover {
       box-shadow: inset 0 0 4px 4px #BDD7ED;
-      background-color: #7b7b7b;
+      background-color: rgba(0, 0, 0, 0.41);
+    }
+    &:nth-child(1) {
+      margin-top: 20%;
+    }
+    &:nth-child(7) {
+      padding-top: 10%;
+      cursor: initial;
+      background: none;
+      box-shadow: none;
+      text-align: center;
+      & a {
+        cursor: pointer;
+        color: #BDD7ED;
+        padding: 10% 2%;
+        font-size: 150%;
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+  }
+  a {
+    color: #BDD7ED;
+  }
+}
+
+.right-fixed-button {
+  position: fixed;
+  right: 4%;
+  border: 2px solid rgb(116, 126, 145);
+  border-radius: 3px;
+  z-index: 4;
+  padding: 0 .2%;
+  font-size: 130%;
+  button {
+    padding: 1px;
+    width: 2%;
+    height: 3%;
+    font-size: 100%;
+    color: #BDD7ED;
+    background: none;
+    cursor: pointer;
+    border-radius: 2px;
+    border: none;
+    &:hover {
+      color: orange;
     }
   }
 }
 
 .two-section {
+  display: table;
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
   color: #BDD7ED;
+  overflow: hidden;
   ul {
     display: block;
     width: 100%;
   }
   li {
-    display: inline-block;
-    width: 33%;
-    height: auto;
+    display: inline-table;
+    width: 32.6%;
     text-align: center;
     vertical-align: middle;
-    padding-top: 20%;
+    padding: 20% 0 3% 0;
+    background-size: 90%;
+    background-position: top 5% center;
+    background-repeat: no-repeat;
+    &:hover {
+      cursor: pointer;
+      background-size: 92%;
+    }
     &:nth-child(1) {
       background-image: url(/img/main-container/home-1.png);
-      background-size: 90%;
-      background-position: top 5% center;
-      background-repeat: no-repeat;
       transform-origin: left top;
       &:hover {
         animation: translate-1 1s infinite ease-in-out;
-        cursor: pointer;
-        background-size: 92%;
       }
     }
     &:nth-child(2) {
       background-image: url(/img/main-container/home-2.png);
-      background-size: 90%;
-      background-position: top 5% center;
-      background-repeat: no-repeat;
       transform-origin: top center;
       &:hover {
         animation: translate-2 1s infinite ease-in-out;
-        cursor: pointer;
-        background-size: 92%;
       }
     }
     &:nth-child(3) {
       background-image: url(/img/main-container/home-3.png);
-      background-size: 90%;
-      background-position: top 5% center;
-      background-repeat: no-repeat;
       transform-origin: right top;
       &:hover {
         animation: translate-3 1s infinite ease-in-out;
-        cursor: pointer;
-        background-size: 92%;
       }
+    }
+    &:nth-child(4) {
+      background-image: url(/img/main-container/home-4.png);
+      transform-origin: right top;
+      &:hover {
+        animation: translate-1 1s infinite ease-in-out;
+      }
+    }
+    &:nth-child(5) {
+      background-image: url(/img/main-container/home-5.png);
+      transform-origin: right top;
+      &:hover {
+        animation: translate-2 1s infinite ease-in-out;
+      }
+    }
+    &:nth-child(6) {
+      background-image: url(/img/main-container/home-6.png);
+      transform-origin: right top;
+      &:hover {
+        animation: translate-3 1s infinite ease-in-out;
+      }
+    }
+  }
+  a {
+    background-color: #00b100;
+    cursor: pointer;
+    box-shadow: inset 0 0 1px 1px black;
+    border-radius: 20px;
+    padding: 1.5% 8%;
+    &:hover {
+      background-color: #00A800;
     }
   }
   p {
     padding: 5%;
   }
   i {
+    color: orange;
     margin-left: 3%;
+    font-size: 110%;
   }
 }
 
+.top-decoration-block {
+  position: relative;
+  left: 0;
+  right: 0;
+  padding-bottom: .6%;
+  margin: 0 45%;
+  background-color: #00b100;
+}
 
+.three-section {
+  position: relative;
+}
+
+.middle-container {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 15% 30%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #BDD7ED;
+  border-radius: 10px;
+  padding: 2%;
+  h2 {
+    padding: 2%;
+  }
+  h4 {
+    padding: 2%;
+  }
+  p {
+    text-align: justify;
+    color: #BDD7ED;
+    margin-bottom: 5%;
+    text-overflow: ellipsis;
+  }
+  a {
+    background-color: #00b100;
+    cursor: pointer;
+    box-shadow: inset 0 0 1px 1px black;
+    border-radius: 20px;
+    padding: 1.5% 8%;
+    &:hover {
+      background-color: #00A800;
+    }
+  }
+}
+
+.four-section {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  h2 {
+    padding: 3% 0;
+    color: #BDD7ED;
+  }
+  ul {
+    display: table;
+    width: 100%;
+  }
+  li {
+    display: inline-table;
+    width: 32.6%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 300%;
+    padding: 6% 0;
+  }
+  i {
+    font-size: 250%;
+    color: #BDD7ED;
+  }
+  p {
+    color: #BDD7ED;
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .top-container {
+    background-size: 10%;
+    i {
+      font-size: 80%;
+    }
+  }
+
+  .top-decoration-block {
+    padding-bottom: 1.4%;
+    margin: 0 40%;
+  }
+
+  .right-fixed-button {
+    font-size: 110%;
+  }
+
+  .right-animated-panel li {
+    padding: 8% 5%;
+    font-size: 80%;
+    &:nth-child(1) {
+      margin-top: 35%;
+    }
+    &:nth-child(7) {
+      width: 100%;
+      & a {
+        display: inline-flex;
+        width: 40%;
+        padding: 5% 4%;
+        font-size: 110%;
+      }
+    }
+  }
+
+  .information-block {
+    font-size: 75%;
+    input {
+      padding: 2% 3%;
+      font-size: 75%;
+    }
+  }
+
+  .two-section li {
+    width: 100%;
+    padding-top: 65%;
+    background-position: top 5% center;
+    &:nth-child(-n+6):hover {
+      animation: none;
+    }
+  }
+}
 
 @keyframes translate-1 {
   50% {
     transform: rotateX(10deg) rotateZ(1deg);
   }
 }
+
 @keyframes translate-2 {
   50% {
     transform: rotateX(-10deg);
   }
 }
+
 @keyframes translate-3 {
   50% {
     transform: rotateX(-10deg) rotateZ(-1deg);

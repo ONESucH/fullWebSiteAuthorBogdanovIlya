@@ -1,14 +1,11 @@
 var allElements = {
     rightAnimatedPanel: $('#rightAnimatedPanel'),
     mainBlock: $('#mainBlock'),
-    starsStatistic: $('#starsStatistic')
+    starsStatistic: $('#starsStatistic'),
+    buttonOne: $('#buttonOne'),
+    takeDataFromInput: $('#takeDataFromInput')
 };
 var logic = false;
-
-$(window).scroll(function () {
-    Scrollissimo.knock();
-    console.log('Работает скрол animated');
-});
 
 function showAndHideElements() {
     logic = !logic;
@@ -17,22 +14,27 @@ function showAndHideElements() {
             'width': '75%'
         });
         allElements.rightAnimatedPanel.css({
-            'width': '25%',
-            'display': 'block'
+            'display': 'block',
+            'width': '25%'
         });
     } else  {
         allElements.mainBlock.css({
             'width': '100%'
         });
         allElements.rightAnimatedPanel.css({
-            'width': '0'
+            'width': '0',
+            'overflow': 'hidden'
         });
     }
 }
 
 function siteStatistics(one, two, three, four, five) {
+    var takeDataFromInput = allElements.takeDataFromInput.val();
     var teg = document.getElementsByTagName('i');
-    teg.className = 'stars-statistic';
+    if (takeDataFromInput === '') {
+        alert('Введите ваш email');
+        return false;
+    }
     switch (teg) {
         case 'one':
             teg.css({
@@ -66,4 +68,5 @@ function siteStatistics(one, two, three, four, five) {
     console.log(three);
     console.log(four);
     console.log(five);
+    allElements.takeDataFromInput.val('');
 }
