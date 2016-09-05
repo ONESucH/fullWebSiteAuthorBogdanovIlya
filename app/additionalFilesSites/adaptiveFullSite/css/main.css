@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  color: #5c676d;
+  background: none;
+}
+a:hover {
+  color: #5c676d;
+  text-decoration: none;
+}
+.main-container {
+  list-style-position: outside;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  min-width: 1260px;
+  max-width: 1265px;
+}
+.main-container .top-container {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: relative;
+  background: #252B2B;
+  height: 147px;
+  padding: 0 0 0 116px;
+}
+.main-container .top-container-search-contacts {
+  height: 40px;
+  width: 1060px;
+  position: relative;
+  background: #252B2B;
+  color: #5c676d;
+  border-bottom: 1px solid #5c676d;
+}
+.main-container .top-container-search-contacts i {
+  padding: 13px;
+}
+.main-container .one-login {
+  border: none;
+}
+.main-container .left-email {
+  float: left;
+  font-size: 12px;
+  color: #9ea4a4;
+}
+.main-container .right-top-container-search-contacts-right {
+  float: right;
+  font-size: 13px;
+  color: #959ca2;
+}
+.main-container .right-top-container-search-contacts-right i {
+  border-right: 1px solid silver;
+}
+.main-container .registration {
+  padding: 0 4Px 0 20px;
+  color: #90989a;
+}
+.main-container .banner {
+  position: relative;
+  float: left;
+}
+.main-container .banner img {
+  padding-left: 15px;
+  max-height: 100px;
+  max-width: 130px;
+}
+.main-container .main-menu {
+  margin: 62px 0 0 17.9%;
+  float: left;
+  list-style: none;
+  background: #252B2B;
+  color: #a8a8a0;
+  text-align: center;
+  position: relative;
+  line-height: 20px;
+  bottom: 0;
+}
+.main-container .main-menu ul {
+  list-style: none;
+}
+.main-container .main-menu ul li {
+  width: 66px;
+  padding: 12px 1px 12px 3px;
+  float: left;
+  cursor: pointer;
+  position: relative;
+}
+.main-container .main-menu ul li:hover {
+  background: #ec8a4d;
+}
+.main-container .main-menu ul li:nth-child(8) {
+  width: 93px;
+}
+.main-container .contact-number {
+  margin: 62px 0;
+  width: 282px;
+  height: 50px;
+  background: #4dc7ec;
+  float: left;
+}
+.main-container .contact-number i {
+  cursor: pointer;
+  font-size: 1.6em;
+  color: #e2f8ff;
+  float: left;
+  background: #35b3d9;
+  padding: 11px 12px;
+}
+.main-container .contact-number p {
+  font-size: 1.5em;
+  color: white;
+  float: left;
+  padding: 8px 20px 13px 13px;
+}
+.main-container .main-container-home {
+  width: auto;
+  height: 775px;
+  top: 146px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-image: url(../img/main-body/1.png);
+}
+.main-container .information-menu {
+  width: 438px;
+  height: 135px;
+  background: white;
+  padding: 1px 25px 0 21px;
+  left: 124px;
+  top: 162px;
+  bottom: 0;
+  right: 0;
+  position: relative;
+}
+.main-container .information-menu h1 {
+  font-size: 1.6em;
+  font-weight: 900;
+  color: #262729;
+}
+.main-container .information-menu p {
+  width: 100%;
+  height: 26%;
+  font-size: 0.9em;
+  color: #8f9392;
+  text-overflow: ellipsis;
+}
+.main-container .information-menu span {
+  color: #c6794b;
+}
+.main-container .button-more-information {
+  display: inline-block;
+  position: relative;
+  left: 123px;
+  top: 162px;
+}
+.main-container .button-more-information button {
+  width: 82px;
+  height: 27px;
+  color: white;
+  background: #2db1d8;
+  border: none;
+}
+.main-container .bottom-menu-search {
+  display: block;
+  margin: 570px 0 0 116px;
+  left: 100px;
+  width: 256px;
+  height: 43px;
+}
+.main-container .bottom-menu-search i {
+  float: left;
+  background: #252b2b;
+  color: #dadbdf;
+  font-size: 1.7em;
+  padding: 10px 18px;
+}
+.main-container .bottom-menu-search p {
+  font-size: 1.4em;
+  float: left;
+  text-align: center;
+  background: #384042;
+  padding: 8px 37px 8px 19px;
+  color: #E4E8EB;
+  font-weight: 600;
+}
+@media (max-width: 1175px) {
+  .contact-number {
+    text-align: center;
+    display: block;
+    left: 0;
+    right: 0;
+    position: relative;
+  }
+  .contact-number p {
+    padding: 8px 80px 13px 13px;
+    height: 150px;
+  }
+}

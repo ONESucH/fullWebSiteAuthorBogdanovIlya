@@ -11,20 +11,25 @@
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="css/minify-css/main.css" type="text/css">
+    <link rel="stylesheet" href=css/lightbox-0.5/jquery.lightbox-0.5.css>
 </head>
 <body>
 <div class="container">
     <div class="background-block"></div>
     <div class="top-container">
         <ul>
-            <li><a href="https://github.com/ONESucH"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.vk.com/0nesuch07"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+            <li>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i>onesuch07@gmail.com</p>
+            </li>
+            <li>
+                <p><i class="fa fa-mobile" aria-hidden="true"></i>8-(900)-000-00-00</p>
+            </li>
         </ul>
     </div>
     <div class="main-container">
         <div class="left-block" id="mainBlock">
             <div class="stars-statistic" id="starsStatistic">
-                <h2>Rate my site<i class="fa fa-hand-o-down" aria-hidden="true"></i></h2>
+                <h2>Rate my Portfolio<i class="fa fa-hand-o-down" aria-hidden="true"></i></h2>
                 <i class="fa fa-star-o" aria-hidden="true" onclick="siteStatistics('one')"></i>
                 <i class="fa fa-star-o" aria-hidden="true" onclick="siteStatistics('two')"></i>
                 <i class="fa fa-star-o" aria-hidden="true" onclick="siteStatistics('three')"></i>
@@ -38,87 +43,123 @@
             <div class="two-section">
                 <div class="top-decoration-block"></div>
                 <ul>
-                    <li>
-                        <h2>One Block</h2>
-                        <h5>information text one<i class="fa fa-info-circle" aria-hidden="true"></i></h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, amet blanditiis commodi
-                            consequatur culpa debitis, doloremque dolorum earum enim est et eum expedita facere hic
-                            ipsam magnam minus molestias nostrum nulla pariatur porro quam quibusdam quisquam quod
-                            reprehenderit, temporibus vel.</p>
-                        <a href="#">Look</a>
+                    <li onclick="modalWindow()">
+                        <h2>Kreative Pixel</h2>
+                        <h5>Landing Page<i class="fa fa-info-circle" aria-hidden="true"></i></h5>
+                        <a href="additionalFilesSites/portfolio-Kreative-Pixel/index.html">Look</a>
                     </li>
-                    <li>
-                        <h2>Two Block</h2>
-                        <h5>information text two<i class="fa fa-info-circle" aria-hidden="true"></i></h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quas, veniam?
-                            Architecto doloribus facilis illo nihil voluptates? Alias beatae corporis delectus dolor
-                            ducimus explicabo magnam pariatur perferendis quas repellat tempora, tempore unde veniam
-                            veritatis, voluptate. Assumenda impedit mollitia quas reprehenderit?</p>
-                        <a href="#">Look</a>
+                    <li onclick="modalWindow()">
+                        <h2>Natural Food</h2>
+                        <h5>Landing Page<i class="fa fa-info-circle" aria-hidden="true"></i></h5>
+                        <a href="additionalFilesSites/portfolio/index.html">Look</a>
                     </li>
-                    <li>
-                        <h2>Three Block</h2>
-                        <h5>information text three<i class="fa fa-info-circle" aria-hidden="true"></i></h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi nam quo similique
-                            ut. Amet, architecto at consequuntur corporis culpa delectus ducimus earum, eligendi eveniet
-                            incidunt, mollitia necessitatibus nemo numquam reiciendis temporibus tenetur vero vitae
-                            voluptatibus? Dolorum et id quisquam.</p>
-                        <a href="#">Look</a>
+                    <li onclick="modalWindow()">
+                        <h2>Background YouTube</h2>
+                        <h5>Landing Page<i class="fa fa-info-circle" aria-hidden="true"></i></h5>
+                        <a href="additionalFilesSites/myFirstVideoBackground/index.html">Look</a>
                     </li>
-                    <li>
-                        <h2>Four Block</h2>
-                        <h5>information text four<i class="fa fa-info-circle" aria-hidden="true"></i></h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, amet blanditiis commodi
-                            consequatur culpa debitis, doloremque dolorum earum enim est et eum expedita facere hic
-                            ipsam magnam minus molestias nostrum nulla pariatur porro quam quibusdam quisquam quod
-                            reprehenderit, temporibus vel.</p>
-                        <a href="#">Look</a>
+                    <li onclick="modalWindow()">
+                        <h2>Iphone WebSite</h2>
+                        <h5>Landing Page<i class="fa fa-info-circle" aria-hidden="true"></i></h5>
+                        <a href="additionalFilesSites/modernAdaptiveSiteOfNewPhones/index.html">Look</a>
                     </li>
-                    <li>
-                        <h2>Five Block</h2>
-                        <h5>information text fiwe<i class="fa fa-info-circle" aria-hidden="true"></i></h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quas, veniam?
-                            Architecto doloribus facilis illo nihil voluptates? Alias beatae corporis delectus dolor
-                            ducimus explicabo magnam pariatur perferendis quas repellat tempora, tempore unde veniam
-                            veritatis, voluptate. Assumenda impedit mollitia quas reprehenderit?</p>
-                        <a href="#">Look</a>
+                    <li onclick="modalWindow()">
+                        <h2>Home Interior</h2>
+                        <h5>Fixed Web Site<i class="fa fa-info-circle" aria-hidden="true"></i></h5>
+                        <a href="additionalFilesSites/adaptiveFullSite/index.html">Look</a>
                     </li>
-                    <li>
-                        <h2>Six Block</h2>
-                        <h5>information text six<i class="fa fa-info-circle" aria-hidden="true"></i></h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi nam quo similique
-                            ut. Amet, architecto at consequuntur corporis culpa delectus ducimus earum, eligendi eveniet
-                            incidunt, mollitia necessitatibus nemo numquam reiciendis temporibus tenetur vero vitae
-                            voluptatibus? Dolorum et id quisquam.</p>
-                        <a href="#">Look</a>
+                    <li onclick="modalWindow()">
+                        <h2>Work Example</h2>
+                        <h5>Fixed an Example of The Block<i class="fa fa-info-circle" aria-hidden="true"></i></h5>
+                        <a href="additionalFilesSites/exampleWork/index.html">Look</a>
                     </li>
                 </ul>
             </div>
             <div class="three-section">
                 <div class="top-decoration-block"></div>
                 <div class="middle-container">
-                    <h2>Text information</h2>
-                    <h4>Text decoration</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis facere fugiat molestiae quam quia. Architecto, autem, deserunt eaque eligendi et exercitationem illum magni, maxime nemo nesciunt perspiciatis quam saepe vel?</p><br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis facere fugiat molestiae quam quia. Architecto, autem, deserunt eaque eligendi et exercitationem illum magni, maxime nemo nesciunt perspiciatis quam saepe vel?</p><br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis facere fugiat molestiae quam quia. Architecto, autem, deserunt eaque eligendi et exercitationem illum magni, maxime nemo nesciunt perspiciatis quam saepe vel?</p><br>
+                    <h2>Author: Bogdanov Ilya</h2>
+                    <h4>Frontend - developer</h4>
+                    <p> Hello.<br>
+                        I am engaged in the external interface 2 year development.<br>
+                        There is experience with HTML / CSS, SASS / LESS, AJAX, JS, Jquery, Bootstrap, NPM, Bauer, GULP,
+                        WORD PRESS, Github, BitBucket (working with the console).<br>
+                        Typeset adaptive websites, without the use of the boot<br>
+                        I am a good company with a good income and regular orders.<br>
+                        All of my work is on Github - https://github.com/ONESucH<br>
+                        --------------My contacts------------—<br>
+                        ВК- https://vk.com/0nesuch07<br>
+                        email.com - onesuch07@gmail.com<br>
+                        --------------------------------------------<br>
+
+                        Sincerely yours,<br>
+                        Ilya</p>
                     <a href="#">Subscribe</a>
                 </div>
             </div>
             <div class="top-decoration-block"></div>
             <div class="four-section">
-                <h2>Tools used when working with layout</h2>
+                <h2>Products used in the layout with</h2>
                 <ul>
-                    <li><i class="fa fa-html5" aria-hidden="true"></i><p>Html 5</p></li>
-                    <li><i class="fa fa-css3" aria-hidden="true"></i><p>Css 3</p></li>
-                    <li><i class="fa fa-bold" aria-hidden="true"></i><p>Bootstrap</p></li>
-                    <li><i class="fa fa-modx" aria-hidden="true"></i><p>Modx</p></li>
-                    <li><i class="fa fa-wordpress" aria-hidden="true"></i><p>Wordpress</p></li>
-                    <li><i class="fa fa-joomla" aria-hidden="true"></i><p>Joomla</p></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                 </ul>
             </div>
+            <div class="top-decoration-block"></div>
+            <div class="five-section">
+                <div class="image-block"></div>
+                <ul>
+                    <li>
+                        <a href="#">Первое меню</a>
+                        <a href="#">Второе меню</a>
+                        <a href="#">Третье меню</a>
+                        <a href="#">Четвёртое меню</a>
+                        <a href="#">Пятое меню</a>
+                    </li>
+                    <li>
+                        <a href="#">Шестое меню</a>
+                        <a href="#">Седьмое меню</a>
+                        <a href="#">Восьмое меню</a>
+                        <a href="#">Девятое меню</a>
+                        <a href="#">Десятое меню</a>
+                    </li>
+                    <li>
+                        <a href="#">Первое меню</a>
+                        <a href="#">Первое меню</a>
+                        <a href="#">Первое меню</a>
+                        <a href="#">Первое меню</a>
+                        <a href="#">Первое меню</a>
+                    </li>
+                    <li>
+                        <a href="#">Первое меню</a>
+                        <a href="#">Первое меню</a>
+                        <a href="#">Первое меню</a>
+                        <a href="#">Первое меню</a>
+                        <a href="#">Первое меню</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-wordpress" aria-hidden="true"></i>
+                        <i class="fa fa-joomla" aria-hidden="true"></i>
+                        <i class="fa fa-modx" aria-hidden="true"></i>
+                        <i class="fa fa-drupal" aria-hidden="true"></i>
+                    </li>
+                </ul>
+                <div class="bottom-information-block">
+                    <p>&copy; Bogdanov Ilya</p>
+                </div>
+            </div>
         </div>
-        <div class="right-animated-panel" id="rightAnimatedPanel">
+        <div class="right-animated-panel">
             <ul>
                 <li><a href="#">One Menu</a></li>
                 <li><a href="#">Two Menu</a></li>
@@ -126,15 +167,15 @@
                 <li><a href="#">Four Menu</a></li>
                 <li><a href="#">Five Menu</a></li>
                 <li><a href="#">Six Menu</a></li>
-                <li>
-                    <a href="https://github.com/ONESucH"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                    <a href="https://www.vk.com/0nesuch07"><i class="fa fa-github" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-bitbucket" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                </li>
             </ul>
+            <div class="right-animated-information-block">
+                <a href="https://github.com/ONESucH"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="https://www.vk.com/0nesuch07"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-bitbucket" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </div>
         </div>
         <div class="right-fixed-button">
             <button id="buttonOne" onclick="showAndHideElements()"><i class="fa fa-bars" aria-hidden="true"></i></button>
@@ -144,6 +185,7 @@
 
 
 <script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="scripts/lightbox-0.5/jquery.lightbox-0.5.js"></script>
 <script src="scripts/main.js"></script>
 </body>
 </html>

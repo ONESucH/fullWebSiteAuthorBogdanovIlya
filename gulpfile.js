@@ -26,7 +26,7 @@ gulp.task('build', function () {
             console.log(details.name + ': ' + details.stats.minifiedSize);
         }))
         .pipe(sourceMaps.init())
-        .pipe(postCss([autoPrefix({browsers: ['last 10 versions'] })]))
+        .pipe(postCss([autoPrefix({browsers: ['last 15 versions'] })]))
         .pipe(sourceMaps.write('.'))
     .pipe(gulp.dest('app/css/minify-css'));
     browserSync.reload();

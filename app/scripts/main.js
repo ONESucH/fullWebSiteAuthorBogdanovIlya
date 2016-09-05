@@ -1,5 +1,5 @@
 var allElements = {
-    rightAnimatedPanel: $('#rightAnimatedPanel'),
+    rightAnimatedPanel: $('.right-animated-panel'),
     mainBlock: $('#mainBlock'),
     starsStatistic: $('#starsStatistic'),
     buttonOne: $('#buttonOne'),
@@ -15,7 +15,8 @@ function showAndHideElements() {
         });
         allElements.rightAnimatedPanel.css({
             'display': 'block',
-            'width': '25%'
+            'width': '25%',
+            'opacity': '10'
         });
     } else  {
         allElements.mainBlock.css({
@@ -23,9 +24,17 @@ function showAndHideElements() {
         });
         allElements.rightAnimatedPanel.css({
             'width': '0',
-            'overflow': 'hidden'
+            'overflow': 'hidden',
+            'opacity': '0'
         });
     }
+}
+
+function modalWindow() {
+    var elem = getElementsByClassName('top-container');
+    elem.getAttribute('background-image');
+    elem.lightBox();
+    console.log(elem, 'Выполнено');
 }
 
 function siteStatistics(one, two, three, four, five) {
