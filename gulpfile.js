@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     postCss = require('gulp-postcss'),
     sourceMaps = require('gulp-sourcemaps'),
+    imageMin = require('gulp-imagemin'),
     autoPrefix = require('autoprefixer');
 
 gulp.task('connect', function () {
@@ -18,18 +19,30 @@ gulp.task('connect', function () {
     ], ['build']);
 });
 
+gulp.task('reduce', function() {
+    gulp.watch([
+        'app/img/standartImages/*.jpeg',
+        'app/img/standartImages/*.jpg',
+        'app/img/standartImages/*.png'
+    ], ['build']);
+    gulp.src('app/img/*')
+        .pipe(imageMin())
+        .pipe(gulp.dest('app/img/'));
+    browserSync.reload();
+});
+
 gulp.task('build', function () {
     gulp.src('app/css/main.less')
         .pipe(less())
-        .pipe(cleanCSS({debug: true}, function(details) {
+        .pipe(cleanCSS({debug: true}, function (details) {
             console.log(details.name + ': ' + details.stats.originalSize);
             console.log(details.name + ': ' + details.stats.minifiedSize);
         }))
         .pipe(sourceMaps.init())
-        .pipe(postCss([autoPrefix({browsers: ['last 15 versions'] })]))
+        .pipe(postCss([autoPrefix({browsers: ['last 10 versions']})]))
         .pipe(sourceMaps.write('.'))
-    .pipe(gulp.dest('app/css/minify-css'));
+        .pipe(gulp.dest('app/css/min.css'));
     browserSync.reload();
 });
 
-gulp.task('default', ['connect', 'build']);
+gulp.task('default', ['connect', 'build', 'reduce']);
