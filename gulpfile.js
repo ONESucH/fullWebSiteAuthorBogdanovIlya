@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     cleanCSS = require('gulp-clean-css'),
@@ -19,30 +21,21 @@ gulp.task('connect', function () {
     ], ['build']);
 });
 
-gulp.task('reduce', function() {
-    gulp.watch([
-        'app/img/standartImages/*.jpeg',
-        'app/img/standartImages/*.jpg',
-        'app/img/standartImages/*.png'
-    ], ['build']);
-    gulp.src('app/img/*')
-        .pipe(imageMin())
-        .pipe(gulp.dest('app/img/'));
-    browserSync.reload();
-});
-
 gulp.task('build', function () {
     gulp.src('app/css/main.less')
         .pipe(less())
         .pipe(cleanCSS({debug: true}, function (details) {
-            console.log(details.name + ': ' + details.stats.originalSize);
-            console.log(details.name + ': ' + details.stats.minifiedSize);
+            console.log('color= red + >>> ' + details.name + ': ' + details.stats.originalSize);
+            console.log('color= red + >>> ' + details.name + ': ' + details.stats.minifiedSize);
         }))
         .pipe(sourceMaps.init())
         .pipe(postCss([autoPrefix({browsers: ['last 10 versions']})]))
         .pipe(sourceMaps.write('.'))
-        .pipe(gulp.dest('app/css/min.css'));
+        .pipe(gulp.dest('app/css/min.css/'));
+    gulp.src('app/dist/*.png')
+        .pipe(imageMin())
+        .pipe(gulp.dest('app/dist/'));
     browserSync.reload();
 });
 
-gulp.task('default', ['connect', 'build', 'reduce']);
+gulp.task('default', ['connect', 'build']);
